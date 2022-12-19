@@ -37,7 +37,7 @@ export const Header = ({ data }) => {
           <Logo onLogoClick={handleLogoClick} />
 
           <Menu
-            menuItems={data.navigation.menuItems}
+            menuItems={data.menuItems}
             isBurgerActive={isBurgerActive}
             setIsBurgerActive={setIsBurgerActive}
           />
