@@ -1,0 +1,16 @@
+# dependencies
+/node_modules
+/.vscode
+
+# production
+/build
+
+# misc
+.env
+.firebaserc
+firebase.json
+
+# other
+/_notes
+/_temp
+/.firebase

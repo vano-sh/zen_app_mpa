@@ -1,0 +1,16 @@
+/* _global.scss*/
+
+body {
+  position: relative;
+  font-family: var(--font-family);
+  font-size: 14px;
+  font-weight: 400;
+
+  &.hidden {
+    overflow: hidden;
+  }
+}
+
+::-webkit-scrollbar {
+  display: none;
+}

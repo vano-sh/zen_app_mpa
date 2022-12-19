@@ -1,0 +1,1 @@
+export { SectionWarranty } from './SectionWarranty'

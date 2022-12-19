@@ -1,0 +1,85 @@
+@import "~shared/config/breakpoints.scss";
+
+section {
+  .wrapper {
+    padding: 20px 15px;
+    margin: 0 auto;
+    max-width: var(--max_width);
+    display: var(--display);
+    justify-content: var(--justify-content);
+    align-items: var(--align-items);
+    flex-wrap: wrap;
+  }
+
+  .title {
+    text-align: center;
+    font-weight: 700;
+    font-size: 30px;
+
+    @media (min-width: $breakpoint_lg) {
+      font-size: 34px;
+    }
+
+    @media (min-width: $breakpoint_xl) {
+      font-size: 40px;
+    }
+  }
+
+  .copy {
+    margin-top: 20px;
+
+    @media (min-width: $breakpoint_lg) {
+      font-size: 18px;
+    }
+
+    @media (min-width: $breakpoint_xl) {
+      margin-top: 30px;
+      font-size: 20px;
+    }
+  }
+
+  .links {
+    display: flex;
+    gap: 5px;
+    margin-top: 20px;
+
+    @media (min-width: $breakpoint_md) {
+      margin-right: 20px;
+    }
+  }
+
+  .link {
+    display: block;
+    height: 44px;
+    margin-top: 15px;
+  }
+
+  .image {
+    position: relative;
+    display: flex;
+    margin-top: 30px;
+    overflow: hidden;
+    border-radius: 20px;
+
+    img {
+      object-fit: cover;
+      transition: all 0.5s;
+    }
+
+    @media (min-width: $breakpoint_md) {
+      img:hover {
+        transform: scale(1.1);
+        transition: all 0.5s;
+      }
+    }
+
+    @media (min-width: $breakpoint_lg) {
+      width: 40%;
+      margin-left: 40px;
+    }
+
+    @media (min-width: $breakpoint_lg) {
+      margin-left: 110px;
+    }
+  }
+}

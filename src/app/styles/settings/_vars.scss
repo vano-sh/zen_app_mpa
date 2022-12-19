@@ -1,0 +1,55 @@
+/* _vars.scss*/
+
+:root {
+  --font-family: "Nunito", sans-serif;
+
+  // max_width
+  --max_width_md: 690px;
+  --max_width_lg: 930px;
+  --max_width_xl: 1110px;
+
+  // breakpoints
+  --breakpoint_md: 768px;
+  --breakpoint_lg: 1152px;
+  --breakpoint_xl: 1440px;
+
+  // heights
+  --height_header_xs: 50px;
+  --height_header_lg: 70px;
+
+  //z-index
+  --z-index_header: 2;
+  --z-index_progress-bar: 3;
+  --z-index_modal: 3;
+  --z-index_preloader: 4;
+  --z-index_chat: 5;
+
+  //colors
+  --color: #333;
+  --bg-color: #fff;
+  --fill: #333;
+  & .dark {
+    --color: #fff;
+    --bg-color: #333;
+    --fill: #fff;
+  }
+
+  // breakpoints
+  --display: flex;
+  --justify-content: center;
+  --align-items: center;
+
+  @media (min-width: 768px) {
+    --display: flex;
+    --align-items: center;
+    --max_width: 690px;
+  }
+
+  @media (min-width: 1152px) {
+    --max_width: 930px;
+  }
+
+  @media (min-width: 1440px) {
+    --max_width: 1110px;
+  }
+}

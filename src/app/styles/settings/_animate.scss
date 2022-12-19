@@ -1,0 +1,11 @@
+.off {
+  transform: translateY(30px);
+  opacity: 0;
+  transition: transform 0.7s, opacity 0.7s;
+}
+
+.on {
+  transform: translateY(0);
+  opacity: 1;
+  transition: transform 0.7s, opacity 0.7s;
+}

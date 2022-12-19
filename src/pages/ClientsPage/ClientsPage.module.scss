@@ -1,0 +1,19 @@
+@import "~shared/config/breakpoints.scss";
+
+.clients {
+  .wrapper {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 30px 30px;
+    padding: 20px 15px;
+    margin: 0 auto;
+    max-width: var(--max_width);
+
+    @media (min-width: $breakpoint_md) {
+      padding: 20px 0;
+    }
+  }
+}

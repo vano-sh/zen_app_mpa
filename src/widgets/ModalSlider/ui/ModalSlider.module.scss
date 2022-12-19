@@ -1,0 +1,146 @@
+.modal_slider {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.9);
+
+  .description {
+    position: absolute;
+    z-index: 1;
+    text-align: center;
+    padding-top: 50px;
+    color: #fff;
+    transition: opacity 0.3s;
+    font-size: 18px;
+
+    &.hidden {
+      opacity: 0;
+    }
+  }
+
+  .blink {
+    border-right: 1px solid #fff;
+    animation-name: blink;
+    animation-duration: 1s;
+    animation-timing-function: step-end;
+    animation-iteration-count: infinite;
+
+    @keyframes blink {
+      0% {
+        opacity: 0;
+      }
+
+      50% {
+        opacity: 1;
+      }
+
+      100% {
+        opacity: 0;
+      }
+    }
+  }
+
+  .slider {
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    background: #fff;
+    border: 1px solid #aaaaaa;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: all 0.5s;
+
+    svg {
+      height: 100px;
+      width: 100px;
+    }
+    .close {
+      position: absolute;
+      right: 0;
+      top: 0;
+      z-index: 1;
+      height: 40px;
+      width: 40px;
+      background: #e9e9e9;
+      fill: #000;
+
+      svg {
+        width: 50%;
+        height: 50%;
+      }
+    }
+
+    .slides {
+      position: relative;
+      display: flex;
+      transition: left 0.5s;
+    }
+
+    .slide {
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .prev,
+    .next {
+      position: absolute;
+      top: 50%;
+      z-index: 2;
+      transform: translateY(-50%);
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: #fff;
+      box-shadow: 1px 3px 5px #5f5f5f80;
+
+      &:disabled {
+        display: none;
+      }
+
+      svg {
+        width: 20%;
+        height: 100%;
+      }
+    }
+
+    .prev {
+      left: 5px;
+    }
+
+    .next {
+      right: 5px;
+    }
+
+    .pagination {
+      position: absolute;
+      left: 50%;
+      bottom: 20px;
+      transform: translateX(-50%);
+      font-size: 18px;
+      font-weight: 700;
+    }
+  }
+
+  .link {
+    position: absolute;
+    bottom: 50px;
+    z-index: 2;
+    font-weight: 700;
+    font-size: 30px;
+    color: #fff;
+  }
+
+  .overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 0;
+  }
+}

@@ -1,0 +1,92 @@
+@import "~shared/config/breakpoints.scss";
+
+.footer {
+  background: #484848;
+
+  .wrapper {
+    color: #fff;
+    padding: 30px 15px;
+
+    @media (min-width: $breakpoint_md) {
+      max-width: var(--max_width_md);
+      margin: 0 auto;
+      padding: 30px 0;
+    }
+
+    @media (min-width: $breakpoint_lg) {
+      max-width: var(--max_width_lg);
+      padding-top: 40px 0;
+    }
+
+    @media (min-width: $breakpoint_xl) {
+      max-width: var(--max_width_xl);
+    }
+  }
+
+  .columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px 30px;
+
+    @media (min-width: $breakpoint_md) {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    @media (min-width: $breakpoint_lg) {
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    }
+  }
+
+  .title {
+    font-weight: 700;
+    font-size: 16px;
+  }
+
+  .item {
+    margin-top: 10px;
+
+    img {
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  .info {
+    position: relative;
+    margin-top: 30px;
+  }
+
+  .copies {
+    margin-top: 20px;
+    font-size: 12px;
+
+    @media (min-width: $breakpoint_md) {
+      width: 75%;
+      font-size: 14px;
+    }
+
+    @media (min-width: $breakpoint_lg) {
+      width: 80%;
+      font-size: 16px;
+    }
+
+    @media (min-width: $breakpoint_lg) {
+      font-size: 16px;
+    }
+  }
+
+  .copy {
+    margin-top: 10px;
+  }
+
+  .copyright {
+    display: block;
+    margin-top: 20px;
+
+    @media (min-width: $breakpoint_md) {
+      position: absolute;
+      top: 40px;
+      right: 0;
+    }
+  }
+}
