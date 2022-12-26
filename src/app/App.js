@@ -8,14 +8,13 @@ import {
   Footer,
   Modal,
   Chatbot,
-  ModalSlider
+  ModalSlider,
 } from 'widgets'
 import { LayoutPage } from 'pages'
 import { classNames } from 'shared/lib/helpers'
 import classes from './App.module.scss'
 
 export const App = () => {
-
   const { lang } = useLang()
   const { theme } = useTheme()
   const dispatch = useDispatch()
@@ -23,12 +22,15 @@ export const App = () => {
   const { data, isLoading, fetchData } = useData()
 
   useEffect(() => {
+    console.log('app')
     dispatch(fetchData())
   }, [lang, dispatch, fetchData])
 
   return (
-    <div className={classNames(classes.app, { 'dark': theme === 'dark' })}>
-
+    <div
+      className={classNames(classes.app, {
+        dark: theme === 'dark',
+      })}>
       <ProgressBar />
 
       {isLoading && <Preloader />}

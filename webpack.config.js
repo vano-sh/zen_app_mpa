@@ -1,6 +1,7 @@
 const path = require('node:path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const { SourceMapDevToolPlugin } = require('webpack')
 
 module.exports = {
   entry: path.resolve(__dirname, 'src', 'index.js'),
@@ -12,6 +13,10 @@ module.exports = {
   },
   mode: process.env.NODE_ENV || 'development',
   devServer: {
+    static: {
+      directory: path.join(__dirname, 'build'),
+    },
+    historyApiFallback: true,
     port: 3100,
   },
   resolve: {
@@ -23,6 +28,9 @@ module.exports = {
     }),
     new MiniCssExtractPlugin({
       filename: '[name].[contenthash].bundle.css',
+    }),
+    new SourceMapDevToolPlugin({
+      filename: '[file].map',
     }),
   ],
   module: {

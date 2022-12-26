@@ -7,8 +7,9 @@ const fetchData = createAsyncThunk(
     const { lang } = thunkApi.getState().langReducer
     try {
       const response = await fetch(
-        `${API_BASE_URL}/${lang}/.json`
+        `${API_BASE_URL}${lang}/.json`
       )
+      console.log(response)
       return response.json()
     } catch (error) {
       return thunkApi.rejectWithValue('Error data...')
@@ -25,17 +26,17 @@ const dataSlice = createSlice({
   name: 'data',
   initialState,
   reducers: {},
-  extraReducers: (builder) => {
-    builder.addCase(fetchData.pending, (state) => {
+  extraReducers: {
+    [fetchData.pending]: (state) => {
       state.isLoading = true
-    }),
-      builder.addCase(fetchData.fulfilled, (state, action) => {
-        state.isLoading = false
-        state.data = action.payload
-      }),
-      builder.addCase(fetchData.rejected, (state) => {
-        state.isLoading = true
-      })
+    },
+    [fetchData.fulfilled]: (state, action) => {
+      state.isLoading = false
+      state.data = action.payload
+    },
+    [fetchData.rejected]: (state) => {
+      state.isLoading = true
+    },
   },
 })
 

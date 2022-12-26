@@ -1,7 +1,7 @@
 import { memo } from 'react'
 import { MenuItem } from './MenuItem'
-import classes from '../../Header.module.scss'
 import { classNames } from 'shared/lib/helpers'
+import classes from '../../Header.module.scss'
 
 export const Menu = memo(
   ({ menuItems, isBurgerActive, setIsBurgerActive }) => {
