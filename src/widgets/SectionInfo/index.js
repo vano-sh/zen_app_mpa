@@ -1,1 +1,1 @@
-export { SectionInfo } from './SectionInfo'
+export { SectionInfo } from './_SectionInfo'

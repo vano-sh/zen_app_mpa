@@ -1,4 +1,7 @@
-import { configureStore, combineReducers } from '@reduxjs/toolkit'
+import {
+  configureStore,
+  combineReducers,
+} from '@reduxjs/toolkit'
 import {
   dataReducer,
   chatbotReducer,
@@ -7,7 +10,7 @@ import {
   previewReducer,
   sliderReducer,
   themeReducer,
-  langReducer
+  langReducer,
 } from 'shared/model'
 
 const rootReducer = combineReducers({
@@ -18,9 +21,8 @@ const rootReducer = combineReducers({
   previewReducer,
   orderReducer,
   sliderReducer,
-  chatbotReducer
+  chatbotReducer,
 })
-
 
 export default function configureAppStore() {
   const store = configureStore({

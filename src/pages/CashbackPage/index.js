@@ -1,1 +1,1 @@
-export { CashbackPage } from './CashbackPage'
+export { CashbackPage } from './_CashbackPage'

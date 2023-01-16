@@ -1,5 +1,5 @@
 import { useData } from './_useData'
-import { useAnimateDescripton } from './_useAnimateDescripton'
+import { useAnimateDescription } from './_useAnimateDescription'
 import { useAnimateRef } from './_useAnimateRef'
 import { useBodyHidden } from './_useBodyHidden'
 import { useChatbot } from './_useChatbot'
@@ -14,7 +14,7 @@ import { useFetch } from './_useFetch'
 
 export {
   useData,
-  useAnimateDescripton,
+  useAnimateDescription,
   useBodyHidden,
   useAnimateRef,
   useChatbot,
@@ -25,5 +25,5 @@ export {
   useSlider,
   useTheme,
   useInfoData,
-  useFetch
+  useFetch,
 }

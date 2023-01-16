@@ -1,5 +1,5 @@
 import {
-  useAnimateDescripton,
+  useAnimateDescription,
   useAnimateRef,
   useBodyHidden,
   useChatbot,
@@ -33,7 +33,7 @@ export {
   previewReducer,
   sliderReducer,
   themeReducer,
-  useAnimateDescripton,
+  useAnimateDescription,
   useAnimateRef,
   useBodyHidden,
   useChatbot,
