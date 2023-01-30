@@ -15,8 +15,6 @@ export const CashbackPage = () => {
   const { theme } = useTheme()
   const { toggleWindowModal } = useForm()
 
-  const { cashback } = data.pages
-
   const dispatch = useDispatch()
 
   const orderBtnRef = useRef(null)
@@ -32,18 +30,18 @@ export const CashbackPage = () => {
     <>
       <section
         className={classes.cashback}
-        data-name={cashback.name}>
+        data-name={data.pages.cashback.name}>
         <div className={classes.wrapper}>
-          {cashback.title && (
+          {data.pages.cashback.title && (
             <Title
               className={classes.title}
-              size={cashback.title.priority}>
-              {cashback.title.data}
+              size={data.pages.cashback.title.priority}>
+              {data.pages.cashback.title.data}
             </Title>
           )}
           <div className={classes.body}>
-            {cashback.texts.length > 0 &&
-              cashback.texts.map((text) => (
+            {data.pages.cashback.texts.length > 0 &&
+              data.pages.cashback.texts.map((text) => (
                 <Text key={text} className={classes.copy}>
                   {text}
                 </Text>
@@ -55,7 +53,7 @@ export const CashbackPage = () => {
               dark: theme === 'dark',
             })}
             onClick={handleModalButtonActiveClick}>
-            {cashback.orderBtn.data}
+            {data.pages.cashback.orderBtn.data}
           </button>
         </div>
       </section>
