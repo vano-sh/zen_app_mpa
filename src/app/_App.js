@@ -22,7 +22,6 @@ export const App = () => {
   const { data, isLoading, fetchData } = useData()
 
   useEffect(() => {
-    console.log('app')
     dispatch(fetchData())
   }, [lang, dispatch, fetchData])
 

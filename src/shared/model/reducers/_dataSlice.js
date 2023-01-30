@@ -1,18 +1,21 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
-import { API_BASE_URL } from 'shared/config/api'
+import { API_BASE_URL } from '../../config/api'
 
 const fetchData = createAsyncThunk(
   'data/fetchData',
-  async (_, thunkApi) => {
-    const { lang } = thunkApi.getState().langReducer
+  async (_, thunkAPI) => {
+    const { lang } = thunkAPI.getState().langReducer
     try {
       const response = await fetch(
         `${API_BASE_URL}${lang}/.json`
       )
-      console.log(response)
-      return response.json()
+      if (!response.ok)
+        throw new Error('data could not be retrieved')
+      const data = await response.json()
+      if (!data) throw new Error('no data')
+      return thunkAPI.fulfillWithValue(data)
     } catch (error) {
-      return thunkApi.rejectWithValue('Error data...')
+      return thunkAPI.rejectWithValue('Error data...')
     }
   }
 )

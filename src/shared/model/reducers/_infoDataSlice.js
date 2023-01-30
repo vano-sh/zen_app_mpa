@@ -6,8 +6,11 @@ const fetchInfoData = createAsyncThunk(
   async (id, thunkAPI) => {
     const { lang } = thunkAPI.getState().langReducer
     try {
-      const response = await fetch(`${API_BASE_URL}${lang}/pages/${id}/.json`)
-      if (!response.ok) throw new Error('data could not be retrieved')
+      const response = await fetch(
+        `${API_BASE_URL}${lang}/pages/${id}/.json`
+      )
+      if (!response.ok)
+        throw new Error('data could not be retrieved')
       const data = await response.json()
       if (!data) throw new Error('no data')
       return thunkAPI.fulfillWithValue(data)
@@ -21,7 +24,7 @@ const fetchInfoData = createAsyncThunk(
 const initialState = {
   isLoading: false,
   infoData: null,
-  errorMessage: ''
+  errorMessage: '',
 }
 
 const infoDataSlice = createSlice({
@@ -40,8 +43,8 @@ const infoDataSlice = createSlice({
     [fetchInfoData.rejected]: (state, action) => {
       state.isLoading = false
       state.errorMessage = action.payload
-    }
-  }
+    },
+  },
 })
 
 const { reducer: infoDataReducer } = infoDataSlice
