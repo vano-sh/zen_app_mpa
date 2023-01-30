@@ -6,7 +6,6 @@ import {
   useData,
   useFetch,
   useForm,
-  useInfoData,
   useLang,
   usePreview,
   useProgressBar,
@@ -16,7 +15,6 @@ import {
 import {
   chatbotReducer,
   dataReducer,
-  infoDataReducer,
   langReducer,
   orderReducer,
   previewReducer,
@@ -27,7 +25,6 @@ import {
 export {
   chatbotReducer,
   dataReducer,
-  infoDataReducer,
   langReducer,
   orderReducer,
   previewReducer,
@@ -40,7 +37,6 @@ export {
   useData,
   useFetch,
   useForm,
-  useInfoData,
   useLang,
   usePreview,
   useProgressBar,

@@ -5,7 +5,6 @@ import {
 import {
   dataReducer,
   chatbotReducer,
-  infoDataReducer,
   orderReducer,
   previewReducer,
   sliderReducer,
@@ -15,7 +14,6 @@ import {
 
 const rootReducer = combineReducers({
   dataReducer,
-  infoDataReducer,
   themeReducer,
   langReducer,
   previewReducer,

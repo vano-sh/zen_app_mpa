@@ -9,7 +9,6 @@ import { usePreview } from './_usePreview'
 import { useProgressBar } from './_useProgressBar'
 import { useSlider } from './_useSlider'
 import { useTheme } from './_useTheme'
-import { useInfoData } from './_useInfoData'
 import { useFetch } from './_useFetch'
 
 export {
@@ -24,6 +23,5 @@ export {
   useProgressBar,
   useSlider,
   useTheme,
-  useInfoData,
   useFetch,
 }
