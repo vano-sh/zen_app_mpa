@@ -3,7 +3,6 @@ import { Link } from './components'
 import classes from './_SectionInfo.module.scss'
 
 export const SectionInfo = ({ data }) => {
-  console.log(data)
   return (
     <section>
       <div className={classes.wrapper}>

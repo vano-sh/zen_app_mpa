@@ -3,11 +3,11 @@ import { API_BASE_URL } from '../../config/api'
 
 const fetchData = createAsyncThunk(
   'data/fetchData',
-  async (_, thunkAPI) => {
+  async (address = '', thunkAPI) => {
     const { lang } = thunkAPI.getState().langReducer
     try {
       const response = await fetch(
-        `${API_BASE_URL}${lang}/.json`
+        `${API_BASE_URL}${lang}/${address}/.json`
       )
       if (!response.ok)
         throw new Error('data could not be retrieved')
@@ -23,6 +23,7 @@ const fetchData = createAsyncThunk(
 const initialState = {
   data: null,
   isLoading: false,
+  errorMessage: '',
 }
 
 const dataSlice = createSlice({
@@ -36,9 +37,11 @@ const dataSlice = createSlice({
     [fetchData.fulfilled]: (state, action) => {
       state.isLoading = false
       state.data = action.payload
+      state.errorMessage = ''
     },
     [fetchData.rejected]: (state) => {
       state.isLoading = true
+      state.errorMessage = action.payload
     },
   },
 })
