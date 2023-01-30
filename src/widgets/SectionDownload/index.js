@@ -1,1 +1,0 @@
-export { SectionDownload } from './SectionDownload'

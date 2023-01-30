@@ -43,18 +43,3 @@ const dataSlice = createSlice({
 const { reducer: dataReducer } = dataSlice
 
 export { dataReducer, fetchData }
-
-/*
-{
-    [fetchData.pending]: (state) => {
-      state.isLoading = true
-    },
-    [fetchData.fulfilled]: (state, { payload }) => {
-      state.isLoading = false
-      state.data = payload
-    },
-    [fetchData.rejected]: (state) => {
-      state.isLoading = true
-    }
-  }
-*/

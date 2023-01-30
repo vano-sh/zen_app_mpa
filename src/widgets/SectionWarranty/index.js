@@ -1,1 +1,0 @@
-export { SectionWarranty } from './SectionWarranty'

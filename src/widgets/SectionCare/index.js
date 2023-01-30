@@ -1,1 +1,0 @@
-export { SectionCare } from './SectionCare'
