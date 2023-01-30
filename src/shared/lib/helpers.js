@@ -120,8 +120,6 @@ export const classNames = (
     .join('')
 
   for (const key in extraClasses) {
-    console.log(extraClass)
-
     if (extraClasses[key]) {
       extraClass += key + ' '
     }

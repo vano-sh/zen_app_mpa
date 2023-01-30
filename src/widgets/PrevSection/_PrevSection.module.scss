@@ -11,6 +11,7 @@ section {
 
     @media (min-width: $breakpoint_md) {
       padding: 30px 0;
+      gap: 30px;
       justify-content: space-between;
       flex-wrap: nowrap;
     }
