@@ -1,6 +1,7 @@
 import { Preloader } from './Preloader'
 import { Header } from './Header'
 import { ProgressBar } from './ProgressBar'
+import { PrevSection } from './PrevSection'
 import { PrevSectionDownload } from './PrevSectionDownload'
 import { PrevSectionWarranty } from './PrevSectionWarranty'
 import { PrevSectionCare } from './PrevSectionCare'
@@ -14,6 +15,7 @@ export {
   Preloader,
   Header,
   ProgressBar,
+  PrevSection,
   PrevSectionDownload,
   PrevSectionWarranty,
   PrevSectionCare,

@@ -1,9 +1,9 @@
 import { Link } from 'react-router-dom'
 import { Title, Text, Preview } from 'shared/ui'
 import { Links } from './ui/Links'
-import classes from './_PrevSectionDownload.module.scss'
+import classes from './_PrevSection.module.scss'
 
-export const PrevSectionDownload = ({ data }) => {
+export const PrevSection = ({ data }) => {
   return (
     <section>
       <div className={classes.wrapper}>

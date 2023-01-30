@@ -2,12 +2,12 @@
 
 section {
   .wrapper {
-    padding: 20px 15px;
-    margin: 0 auto;
-    max-width: var(--max_width);
     display: var(--display);
     flex-wrap: wrap;
     align-items: var(--align-items);
+    margin: 0 auto;
+    max-width: var(--max_width);
+    padding: 20px 15px;
 
     @media (min-width: $breakpoint_md) {
       padding: 20px 0;
@@ -17,9 +17,10 @@ section {
   }
 
   .body {
+    // margin: 0 20px;
+
     @media (min-width: $breakpoint_md) {
       width: 50%;
-      margin: 0 20px;
     }
   }
 
@@ -36,23 +37,36 @@ section {
     }
   }
 
-  .copy {
-    // margin-top: 20px;
+  .copies {
+    margin-top: 20px;
 
     @media (min-width: $breakpoint_lg) {
       font-size: 18px;
     }
-
     @media (min-width: $breakpoint_xl) {
-      // margin-top: 30px;
+      margin-top: 30px;
       font-size: 20px;
     }
   }
 
-  .link {
+  .copy {
+    margin-top: 10px;
+  }
+
+  .links {
+    display: flex;
+    gap: 10px;
     margin-top: 20px;
+  }
+
+  .link {
     font-weight: 700;
     color: #333;
+
+    svg {
+      width: 150px;
+      height: 44px;
+    }
   }
 
   .image {
@@ -76,5 +90,11 @@ section {
         transition: all 0.5s;
       }
     }
+  }
+
+  .more {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: 700;
   }
 }
