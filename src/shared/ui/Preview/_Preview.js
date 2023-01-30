@@ -3,6 +3,7 @@ import { useDispatch } from 'react-redux'
 import { addSlides } from 'shared/model/reducers/_sliderSlice'
 import { setPreviewDetails } from 'shared/model/reducers/_previewSlice'
 import { useAnimateRef } from 'shared/model'
+import ZoomIcon from '../../assets/icons/svg/zoom.svg'
 import classes from './_Preview.module.scss'
 
 export const Preview = ({ image }) => {
@@ -34,11 +35,13 @@ export const Preview = ({ image }) => {
   }, [image, dispatch])
 
   return (
-    <button
-      className={classes.preview}
-      ref={previewRef}
-      onClick={handlePreviewClick}>
-      <img src={image.source} alt={image.alternate} />
-    </button>
+    <div className={classes.preview}>
+      <button ref={previewRef} onClick={handlePreviewClick}>
+        <img src={image.source} alt={image.alternate} />
+      </button>
+      <div className={classes.zoom}>
+        <ZoomIcon />
+      </div>
+    </div>
   )
 }
