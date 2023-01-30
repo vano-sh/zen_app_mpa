@@ -8,10 +8,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
   background: var(--bg-color);
   fill: var(--fill);
 
   svg {
+    width: 150px;
+    height: 150px;
     animation: bounceIn 1s infinite;
   }
 
