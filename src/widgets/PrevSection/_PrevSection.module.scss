@@ -10,15 +10,13 @@ section {
     padding: 20px 15px;
 
     @media (min-width: $breakpoint_md) {
-      padding: 20px 0;
+      padding: 30px 0;
       justify-content: space-between;
       flex-wrap: nowrap;
     }
   }
 
   .body {
-    // margin: 0 20px;
-
     @media (min-width: $breakpoint_md) {
       width: 50%;
     }
@@ -71,25 +69,6 @@ section {
 
   .image {
     position: relative;
-    display: flex;
-    margin-top: 30px;
-    overflow: hidden;
-    border-radius: 20px;
-
-    img {
-      object-fit: cover;
-      transition: all 0.5s;
-    }
-
-    @media (min-width: $breakpoint_md) {
-      width: 50%;
-      margin-top: 0;
-
-      img:hover {
-        transform: scale(1.1);
-        transition: all 0.5s;
-      }
-    }
   }
 
   .more {
