@@ -16,6 +16,10 @@ section {
     }
   }
 
+  .odd {
+    order: 1;
+  }
+
   .body {
     @media (min-width: $breakpoint_md) {
       width: 50%;

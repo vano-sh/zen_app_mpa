@@ -1,1 +1,0 @@
-export { PrevSectionWarranty } from './_PrevSectionWarranty'

@@ -1,13 +1,19 @@
 import { Link } from 'react-router-dom'
 import { Title, Text, Preview } from 'shared/ui'
+import { classNames } from 'shared/lib/helpers'
 import { Links } from './ui/Links'
 import classes from './_PrevSection.module.scss'
 
-export const PrevSection = ({ data }) => {
+export const PrevSection = ({ data, odd }) => {
+  const classOdd = classes.odd
+  const classNameBody = classNames(classes.body, {
+    classOdd: odd,
+  })
+
   return (
     <section>
       <div className={classes.wrapper}>
-        <div className={classes.body}>
+        <div className={classNameBody}>
           {data?.title && (
             <Title className={classes.title} size={2}>
               {data.title.data}
