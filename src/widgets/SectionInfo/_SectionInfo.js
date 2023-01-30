@@ -3,6 +3,7 @@ import { Link } from './components'
 import classes from './_SectionInfo.module.scss'
 
 export const SectionInfo = ({ data }) => {
+  console.log(data)
   return (
     <section>
       <div className={classes.wrapper}>
@@ -21,11 +22,6 @@ export const SectionInfo = ({ data }) => {
 
           {data?.links && <Link links={data.links} />}
         </div>
-        {data?.image && (
-          <div className={classes.image}>
-            <Preview image={data.image} />
-          </div>
-        )}
       </div>
     </section>
   )
