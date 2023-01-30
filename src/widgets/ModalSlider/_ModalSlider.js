@@ -1,10 +1,9 @@
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useRef, useState, useCallback } from 'react'
 import { useDispatch } from 'react-redux'
 import { useBodyHidden, usePreview } from 'shared/model'
 import { Description, Slider } from './components'
 import { debounce } from 'shared/lib/helpers'
 import classes from './_ModalSlider.module.scss'
-import { useCallback } from 'react'
 
 export const ModalSlider = () => {
   const [isSliderActive, setIsSliderActive] = useState(false)
