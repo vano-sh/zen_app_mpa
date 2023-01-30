@@ -5,15 +5,13 @@ import { Links } from './ui/Links'
 import classes from './_PrevSection.module.scss'
 
 export const PrevSection = ({ data, odd }) => {
-  const classOdd = classes.odd
-  const classNameBody = classNames(classes.body, {
-    classOdd: odd,
-  })
-
   return (
     <section>
       <div className={classes.wrapper}>
-        <div className={classNameBody}>
+        <div
+          className={classNames(classes.body, {
+            odd: odd,
+          })}>
           {data?.title && (
             <Title className={classes.title} size={2}>
               {data.title.data}

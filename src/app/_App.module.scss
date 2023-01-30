@@ -1,4 +1,4 @@
-@import "~shared/config/breakpoints.scss";
+@import '~shared/config/breakpoints.scss';
 
 .app {
   background-color: var(--bg-color);
@@ -8,6 +8,6 @@
   overflow: hidden;
 
   @media (min-width: $breakpoint_lg) {
-    padding: var(--height_header_lg) 0;
+    padding: var(--height_header_lg) 0 0 0;
   }
 }

@@ -1,7 +1,7 @@
 /* _vars.scss*/
 
 :root {
-  --font-family: "Nunito", sans-serif;
+  --font-family: 'Nunito', sans-serif;
 
   // max_width
   --max_width_md: 690px;
@@ -51,5 +51,12 @@
 
   @media (min-width: 1440px) {
     --max_width: 1110px;
+  }
+
+  & .odd {
+    @media (min-width: 768px) {
+      order: 1;
+      margin-left: 30px;
+    }
   }
 }

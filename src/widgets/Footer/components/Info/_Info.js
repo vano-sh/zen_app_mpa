@@ -13,7 +13,7 @@ export const Info = ({ info }) => {
 
   return (
     <div className={classes.info} ref={infoRef}>
-      <button>
+      <button className={classes.logo}>
         <IconLogoFooter />
       </button>
       <div className={classes.copies}>
