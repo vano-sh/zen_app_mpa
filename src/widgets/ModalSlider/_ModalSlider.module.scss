@@ -126,13 +126,24 @@
     }
   }
 
-  .link {
+  .more {
     position: absolute;
     bottom: 50px;
     z-index: 2;
     font-weight: 700;
-    font-size: 30px;
+    font-size: 20px;
     color: #fff;
+    opacity: 0;
+    animation: appearance 3.5s forwards;
+  }
+
+  @keyframes appearance {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
   }
 
   .overlay {

@@ -6,7 +6,6 @@ import { useAnimateRef } from 'shared/model'
 import classes from './_Preview.module.scss'
 
 export const Preview = ({ image }) => {
-
   const previewRef = useRef(null)
 
   const dispatch = useDispatch()
@@ -14,7 +13,8 @@ export const Preview = ({ image }) => {
   useAnimateRef(previewRef)
 
   const handlePreviewClick = () => {
-    const { top, left, height, width } = previewRef.current.getBoundingClientRect()
+    const { top, left, height, width } =
+      previewRef.current.getBoundingClientRect()
 
     const details = {
       id: image.id,
@@ -23,7 +23,7 @@ export const Preview = ({ image }) => {
       top,
       left,
       height,
-      width
+      width,
     }
 
     dispatch(setPreviewDetails(details))
@@ -37,12 +37,8 @@ export const Preview = ({ image }) => {
     <button
       className={classes.preview}
       ref={previewRef}
-      onClick={handlePreviewClick}
-    >
-      <img
-        src={image.source}
-        alt={image.alternate}
-      />
+      onClick={handlePreviewClick}>
+      <img src={image.source} alt={image.alternate} />
     </button>
   )
 }

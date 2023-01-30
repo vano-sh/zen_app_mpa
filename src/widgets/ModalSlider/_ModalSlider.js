@@ -1,10 +1,10 @@
 import { useEffect, useRef, useState } from 'react'
 import { useDispatch } from 'react-redux'
-import { Link } from 'react-router-dom'
 import { useBodyHidden, usePreview } from 'shared/model'
 import { Description, Slider } from './components'
 import { debounce } from 'shared/lib/helpers'
 import classes from './_ModalSlider.module.scss'
+import { useCallback } from 'react'
 
 export const ModalSlider = () => {
   const [isSliderActive, setIsSliderActive] = useState(false)
@@ -100,11 +100,11 @@ export const ModalSlider = () => {
     setIsSliderCentered(true)
   }, [isSliderCentered])
 
-  const handleCloseClick = () => {
+  const handleCloseClick = useCallback(() => {
     setIsImageBoxBackward(true)
     setIsDescriptionHidden(true)
     setIsSliderActive(false)
-  }
+  })
 
   const handleSliderCentering = () => {
     setIsSliderCentered(false)
@@ -128,13 +128,6 @@ export const ModalSlider = () => {
         isImageBoxBackward={isImageBoxBackward}
         onCloseClick={handleCloseClick}
       />
-
-      <div className={classes.link}>
-        <Link to={'/'} onClick={handleCloseClick}>
-          More detailed...
-        </Link>
-      </div>
-
       <div
         className={classes.overlay}
         onClick={handleCloseClick}></div>
