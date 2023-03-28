@@ -1,4 +1,4 @@
-import { Form } from './Form'
-import { Success } from './Success'
+import { Form } from './Form/Form'
+import { Success } from './Success/Success'
 
 export { Form, Success }

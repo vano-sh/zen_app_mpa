@@ -9,6 +9,7 @@
 .env
 .firebaserc
 firebase.json
+jsconfig.json
 
 # other
 /_notes

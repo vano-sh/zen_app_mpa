@@ -1,1 +1,1 @@
-export { HomePage } from './_HomePage'
+export { HomePage } from './HomePage'

@@ -1,0 +1,68 @@
+@import '~shared/config/breakpoints.scss';
+
+section {
+  .wrapper {
+    padding: 20px 15px;
+    margin: 0 auto;
+    max-width: var(--max_width);
+    display: var(--display);
+    -webkit-box-pack: var(--justify-content);
+    -ms-flex-pack: var(--justify-content);
+    justify-content: var(--justify-content);
+    -webkit-box-align: var(--align-items);
+    -ms-flex-align: var(--align-items);
+    align-items: var(--align-items);
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+
+  .title {
+    text-align: center;
+    font-weight: 700;
+    font-size: 30px;
+
+    @media (min-width: $breakpoint_lg) {
+      font-size: 34px;
+    }
+
+    @media (min-width: $breakpoint_xl) {
+      font-size: 40px;
+    }
+  }
+
+  .copy {
+    margin-top: 20px;
+
+    @media (min-width: $breakpoint_lg) {
+      font-size: 18px;
+    }
+
+    @media (min-width: $breakpoint_xl) {
+      margin-top: 30px;
+      font-size: 20px;
+    }
+  }
+
+  .links {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 5px;
+    margin-top: 20px;
+
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+
+    @media (min-width: $breakpoint_md) {
+      margin-right: 20px;
+    }
+  }
+
+  .link {
+    display: block;
+    height: 44px;
+    margin-top: 15px;
+  }
+}

@@ -1,3 +1,3 @@
-import { ColumnItem } from './ColumnItem'
+import { ColumnItem } from './ColumnItem/ColumnItem'
 
 export { ColumnItem }

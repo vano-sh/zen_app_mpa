@@ -1,0 +1,314 @@
+@import '~shared/config/breakpoints.scss';
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-bottom: 2px #e5e5e5 solid;
+  background-color: var(--bg-color);
+  fill: var(--fill);
+
+  @media (min-width: $breakpoint_lg) {
+    height: var(--height_header_lg);
+  }
+
+  .wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 100%;
+    padding: 10px 15px;
+    background: inherit;
+
+    @media (min-width: $breakpoint_md) {
+      max-width: var(--max_width_md);
+      margin: 0 auto;
+      padding: 10px 0;
+    }
+
+    @media (min-width: $breakpoint_lg) {
+      max-width: var(--max_width_lg);
+    }
+
+    @media (min-width: $breakpoint_xl) {
+      max-width: var(--max_width_xl);
+    }
+  }
+
+  .nav {
+    position: relative;
+    width: 100%;
+    background: inherit;
+
+    @media (min-width: $breakpoint_lg) {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+    }
+  }
+
+  .logo {
+    display: block;
+    height: 30px;
+
+    a {
+      fill: inherit;
+    }
+
+    svg {
+      height: 100%;
+      width: 100%;
+    }
+
+    @media (min-width: $breakpoint_lg) {
+      height: 40px;
+    }
+  }
+
+  .menu {
+    position: fixed;
+    top: -100%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+    background: inherit;
+
+    &.active {
+      top: calc(var(--height_header_xs) + 2px);
+    }
+
+    @media (min-width: $breakpoint_lg) {
+      position: static;
+      z-index: 0;
+      -webkit-transform: translateY(0);
+      -ms-transform: translateY(0);
+      transform: translateY(0);
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+      flex-direction: row;
+      -webkit-box-pack: end;
+      -ms-flex-pack: end;
+      justify-content: flex-end;
+      opacity: 1;
+      -webkit-transition: -webkit-transform 0.5s;
+      transition: -webkit-transform 0.5s;
+      -o-transition: transform 0.5s;
+      transition: transform 0.5s;
+      transition: transform 0.5s, -webkit-transform 0.5s;
+    }
+  }
+
+  .item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    height: 80px;
+    border-bottom: 2px solid #e5e5e5;
+    -webkit-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s;
+
+    &:hover {
+      -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+      transform: scale(1.1);
+    }
+
+    @media (min-width: $breakpoint_lg) {
+      -ms-flex-preferred-size: content;
+      flex-basis: content;
+      margin-left: 40px;
+      height: 100%;
+      border: none;
+      text-align: right;
+      padding: 0;
+    }
+
+    @media (min-width: $breakpoint_xl) {
+      margin-left: 50px;
+    }
+
+    button {
+      width: 100%;
+      height: 100%;
+
+      @media (min-width: $breakpoint_lg) {
+        overflow: hidden;
+        font-size: 20px;
+
+        &::after {
+          content: '';
+          display: block;
+          height: 2px;
+          background: currentColor;
+          -webkit-transition: -webkit-transform 0.5s;
+          transition: -webkit-transform 0.5s;
+          -o-transition: transform 0.5s;
+          transition: transform 0.5s;
+          transition: transform 0.5s, -webkit-transform 0.5s;
+          -webkit-transform: translateX(-110%);
+          -ms-transform: translateX(-110%);
+          transform: translateX(-110%);
+        }
+
+        &:hover {
+          &::after {
+            -webkit-transition: -webkit-transform 0.5s;
+            transition: -webkit-transform 0.5s;
+            -o-transition: transform 0.5s;
+            transition: transform 0.5s;
+            transition: transform 0.5s, -webkit-transform 0.5s;
+            -webkit-transform: translateX(0);
+            -ms-transform: translateX(0);
+            transform: translateX(0);
+          }
+        }
+      }
+    }
+
+    span {
+      font-size: 24px;
+
+      @media (min-width: $breakpoint_md) {
+        font-size: 20px;
+      }
+    }
+  }
+
+  .lang {
+    padding: 4px;
+    border: 1px solid currentColor;
+    border-radius: 4px;
+    background: inherit;
+
+    @media (min-width: $breakpoint_lg) {
+      margin-left: 40px;
+    }
+
+    @media (min-width: $breakpoint_xl) {
+      margin-left: 50px;
+    }
+
+    select,
+    option {
+      background: inherit;
+      color: currentColor;
+    }
+  }
+
+  .theme {
+    width: 50px;
+    height: 30px;
+    margin-left: 20px;
+
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+
+    @media (min-width: $breakpoint_lg) {
+      margin-left: 40px;
+    }
+
+    @media (min-width: $breakpoint_xl) {
+      margin-left: 50px;
+    }
+  }
+
+  .burger {
+    position: relative;
+    width: 60px;
+    height: 25px;
+    margin-left: 20px;
+
+    @media (min-width: $breakpoint_lg) {
+      display: none;
+    }
+
+    span {
+      display: block;
+      height: 2px;
+      width: 100%;
+      background: currentColor;
+      -webkit-transition: background 0.2s;
+      -o-transition: background 0.2s;
+      transition: background 0.2s;
+    }
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      height: 2px;
+      width: 100%;
+      left: 0;
+      background: currentColor;
+      -webkit-transition: -webkit-transform 0.5s;
+      transition: -webkit-transform 0.5s;
+      -o-transition: transform 0.5s;
+      transition: transform 0.5s;
+      transition: transform 0.5s, -webkit-transform 0.5s;
+    }
+
+    &::before {
+      top: 0;
+    }
+
+    &::after {
+      bottom: 0;
+    }
+
+    &.active {
+      span {
+        background: transparent;
+      }
+
+      &::before {
+        top: 50%;
+        -webkit-transform: translateY(-50%) rotate(45deg);
+        -ms-transform: translateY(-50%) rotate(45deg);
+        transform: translateY(-50%) rotate(45deg);
+      }
+
+      &::after {
+        bottom: 50%;
+        -webkit-transform: translateY(50%) rotate(-45deg);
+        -ms-transform: translateY(50%) rotate(-45deg);
+        transform: translateY(50%) rotate(-45deg);
+      }
+    }
+  }
+}

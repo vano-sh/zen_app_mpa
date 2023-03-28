@@ -1,12 +1,12 @@
-import { Preloader } from './Preloader'
-import { Header } from './Header'
-import { ProgressBar } from './ProgressBar'
-import { PrevSection } from './PrevSection'
-import { SectionInfo } from './SectionInfo'
-import { Chatbot } from './Chatbot'
-import { ModalSlider } from './ModalSlider'
-import { Modal } from './Modal'
-import { Footer } from './Footer'
+import { Preloader } from './Preloader/Preloader'
+import { Header } from './Header/Header'
+import { ProgressBar } from './ProgressBar/ProgressBar'
+import { PrevSection } from './PrevSection/PrevSection'
+import { SectionInfo } from './SectionInfo/SectionInfo'
+import { Chatbot } from './Chatbot/Chatbot'
+import { ModalSlider } from './ModalSlider/ModalSlider'
+import { Modal } from './Modal/Modal'
+import { Footer } from './Footer/Footer'
 
 export {
   Preloader,

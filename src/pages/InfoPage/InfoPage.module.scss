@@ -1,0 +1,101 @@
+@import '~shared/config/breakpoints.scss';
+
+.infoPage {
+  .wrapper {
+    padding: 20px 15px;
+    margin: 0 auto;
+    max-width: var(--max_width);
+    display: var(--display);
+    -webkit-box-pack: var(--justify-content);
+    -ms-flex-pack: var(--justify-content);
+    justify-content: var(--justify-content);
+    -webkit-box-align: var(--align-items);
+    -ms-flex-align: var(--align-items);
+    align-items: var(--align-items);
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+
+  .title {
+    text-align: center;
+    font-weight: 700;
+    font-size: 30px;
+
+    @media (min-width: $breakpoint_lg) {
+      font-size: 34px;
+    }
+
+    @media (min-width: $breakpoint_xl) {
+      font-size: 40px;
+    }
+  }
+
+  .copy {
+    margin-top: 20px;
+
+    @media (min-width: $breakpoint_lg) {
+      font-size: 18px;
+    }
+
+    @media (min-width: $breakpoint_xl) {
+      margin-top: 30px;
+      font-size: 20px;
+    }
+  }
+
+  .links {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 5px;
+    margin-top: 20px;
+
+    @media (min-width: $breakpoint_md) {
+      margin-right: 20px;
+    }
+  }
+
+  .link {
+    display: block;
+    height: 44px;
+    margin-top: 15px;
+  }
+
+  .image {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: 30px;
+    overflow: hidden;
+    border-radius: 20px;
+
+    img {
+      -o-object-fit: cover;
+      object-fit: cover;
+      -webkit-transition: all 0.5s;
+      -o-transition: all 0.5s;
+      transition: all 0.5s;
+    }
+
+    @media (min-width: $breakpoint_md) {
+      img:hover {
+        -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+        transform: scale(1.1);
+        -webkit-transition: all 0.5s;
+        -o-transition: all 0.5s;
+        transition: all 0.5s;
+      }
+    }
+
+    @media (min-width: $breakpoint_lg) {
+      width: 40%;
+      margin-left: 40px;
+    }
+
+    @media (min-width: $breakpoint_lg) {
+      margin-left: 110px;
+    }
+  }
+}

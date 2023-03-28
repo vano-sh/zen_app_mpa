@@ -1,1 +1,1 @@
-export { InfoPage } from './_InfoPage'
+export { InfoPage } from './InfoPage'

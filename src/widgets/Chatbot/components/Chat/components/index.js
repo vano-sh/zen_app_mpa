@@ -1,5 +1,5 @@
-import { Header } from './Header'
-import { Dialog } from './Dialog'
-import { Footer } from './Footer'
+import { Header } from './Header/Header'
+import { Dialog } from './Dialog/Dialog'
+import { Footer } from './Footer/Footer'
 
 export { Header, Dialog, Footer }

@@ -1,25 +1,25 @@
 /* _fonts.scss*/
 
 @include font_face(
-  'Nunito', 
+  'Nunito',
   'Nunito-Regular',
-  400, 
+  400,
   normal,
   '~shared/assets/fonts/Nunito'
 );
 
 @include font_face(
-  'Nunito', 
+  'Nunito',
   'Nunito-Bold',
-  700, 
+  700,
   normal,
   '~shared/assets/fonts/Nunito'
 );
 
 @include font_face(
-  'Nunito', 
+  'Nunito',
   'Nunito-Italic',
-  400, 
+  400,
   italic,
   '~shared/assets/fonts/Nunito'
-)
+);

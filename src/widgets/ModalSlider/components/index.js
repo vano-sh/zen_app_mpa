@@ -1,4 +1,4 @@
-import { Description } from './Description'
-import { Slider } from './Slider'
+import { Description } from './Description/Description'
+import { Slider } from './Slider/Slider'
 
 export { Description, Slider }

@@ -55,6 +55,8 @@
 
   & .odd {
     @media (min-width: 768px) {
+      -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
       order: 1;
     }
   }

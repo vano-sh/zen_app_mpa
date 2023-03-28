@@ -1,1 +1,1 @@
-export { App } from './_App'
+export { App } from './App'

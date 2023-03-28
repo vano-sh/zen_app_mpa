@@ -1,15 +1,15 @@
 /* _mixins.scss*/
 
-@mixin font_face (
+@mixin font_face(
   $font_name,
   $file_name,
-  $font_weigth,
+  $font_weight,
   $font_style,
   $font_path
 ) {
   @font-face {
     font-family: $font_name;
-    font-weight: $font_weigth;
+    font-weight: $font_weight;
     font-style: $font_style;
     font-display: swap;
     src: url('#{$font_path}/#{$file_name}.woff2') format('woff2');

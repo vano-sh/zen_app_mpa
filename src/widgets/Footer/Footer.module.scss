@@ -1,0 +1,121 @@
+@import '~shared/config/breakpoints.scss';
+
+.footer {
+  background: #484848;
+
+  .wrapper {
+    color: #fff;
+    padding: 30px 15px;
+
+    @media (min-width: $breakpoint_md) {
+      max-width: var(--max_width_md);
+      margin: 0 auto;
+      padding: 30px 0;
+    }
+
+    @media (min-width: $breakpoint_lg) {
+      max-width: var(--max_width_lg);
+      padding-top: 40px 0;
+    }
+
+    @media (min-width: $breakpoint_xl) {
+      max-width: var(--max_width_xl);
+    }
+  }
+
+  .columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px 30px;
+
+    @media (min-width: $breakpoint_md) {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    @media (min-width: $breakpoint_lg) {
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    }
+  }
+
+  .title {
+    font-weight: 700;
+    font-size: 16px;
+  }
+
+  .item {
+    margin-top: 10px;
+
+    img {
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  .info {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin-top: 30px;
+
+    @media (min-width: $breakpoint_md) {
+      -webkit-box-pack: start;
+      -ms-flex-pack: start;
+      justify-content: flex-start;
+    }
+  }
+
+  .logo {
+    svg {
+      width: 215px;
+      height: 100%;
+    }
+
+    @media (min-width: $breakpoint_xl) {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      width: 100%;
+    }
+  }
+
+  .copies {
+    margin-top: 10px;
+    font-size: 12px;
+
+    @media (min-width: $breakpoint_md) {
+      width: 75%;
+      font-size: 14px;
+    }
+
+    @media (min-width: $breakpoint_lg) {
+      width: 80%;
+      font-size: 16px;
+    }
+  }
+
+  .copy {
+    margin-top: 10px;
+  }
+
+  .copyright {
+    margin-top: 20px;
+    width: 130px;
+
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+
+    @media (min-width: $breakpoint_md) {
+      position: absolute;
+      top: 40px;
+      right: 0;
+    }
+  }
+}

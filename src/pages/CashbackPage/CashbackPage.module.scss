@@ -1,0 +1,116 @@
+@import '~shared/config/breakpoints.scss';
+
+.cashback {
+  .wrapper {
+    padding: 20px 15px;
+    margin: 0 auto;
+    max-width: var(--max_width);
+    display: var(--display);
+    -webkit-box-pack: var(--justify-content);
+    -ms-flex-pack: var(--justify-content);
+    justify-content: var(--justify-content);
+    -webkit-box-align: var(--align-items);
+    -ms-flex-align: var(--align-items);
+    align-items: var(--align-items);
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+
+  .title {
+    font-weight: 700;
+    font-size: 30px;
+
+    @media (min-width: $breakpoint_lg) {
+      font-size: 34px;
+    }
+
+    @media (min-width: $breakpoint_xl) {
+      font-size: 40px;
+    }
+  }
+
+  .copy {
+    margin-top: 10px;
+
+    &:first-of-type {
+      margin-top: 20px;
+    }
+
+    @media (min-width: $breakpoint_lg) {
+      font-size: 18px;
+    }
+
+    @media (min-width: $breakpoint_xl) {
+      font-size: 20px;
+
+      &:first-of-type {
+        margin-top: 30px;
+      }
+    }
+  }
+
+  .btn {
+    position: relative;
+    border: 1px #aaaaaa solid;
+    border-radius: 30px;
+    width: 100%;
+    margin-top: 20px;
+    padding: 14px 0;
+    font-size: 16px;
+    overflow: hidden;
+
+    @media (min-width: $breakpoint_md) {
+      max-width: 225px;
+
+      &:hover {
+        color: #fff;
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+        border-radius: 30px;
+        background: #333;
+        -webkit-transition: all 0.5s;
+        -o-transition: all 0.5s;
+        transition: all 0.5s;
+        -webkit-transform: translateX(-110%);
+        -ms-transform: translateX(-110%);
+        transform: translateX(-110%);
+      }
+
+      &:hover::after {
+        -webkit-transition: all 0.5s;
+        -o-transition: all 0.5s;
+        transition: all 0.5s;
+        -webkit-transform: translateX(0);
+        -ms-transform: translateX(0);
+        transform: translateX(0);
+      }
+
+      &.dark {
+        &:hover {
+          color: #333;
+        }
+
+        &:hover::after {
+          background: #fff;
+        }
+      }
+    }
+
+    @media (min-width: $breakpoint_lg) {
+      max-width: 245px;
+    }
+
+    @media (min-width: $breakpoint_xl) {
+      margin-top: 30px;
+      max-width: 285px;
+    }
+  }
+}

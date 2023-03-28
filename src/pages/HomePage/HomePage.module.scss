@@ -1,0 +1,114 @@
+@import '~shared/config/breakpoints.scss';
+
+.home {
+  .wrapper {
+    padding: 20px 15px;
+    margin: 0 auto;
+    max-width: var(--max_width);
+    display: var(--display);
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-align: var(--align-items);
+    -ms-flex-align: var(--align-items);
+    align-items: var(--align-items);
+
+    @media (min-width: $breakpoint_md) {
+      padding: 20px 0;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+    }
+  }
+
+  .body {
+    @media (min-width: $breakpoint_md) {
+      width: 50%;
+      margin: 0 20px;
+    }
+  }
+
+  .title {
+    font-weight: 700;
+    font-size: 30px;
+
+    @media (min-width: $breakpoint_lg) {
+      font-size: 34px;
+    }
+
+    @media (min-width: $breakpoint_xl) {
+      font-size: 40px;
+    }
+  }
+
+  .copy {
+    margin-top: 20px;
+
+    @media (min-width: $breakpoint_lg) {
+      font-size: 18px;
+    }
+
+    @media (min-width: $breakpoint_xl) {
+      margin-top: 30px;
+      font-size: 20px;
+    }
+  }
+
+  .link {
+    margin-top: 20px;
+    font-weight: 700;
+    color: #333;
+  }
+
+  .image {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: 30px;
+    overflow: hidden;
+    border-radius: 20px;
+
+    img {
+      -o-object-fit: cover;
+      object-fit: cover;
+      -webkit-transition: all 0.5s;
+      -o-transition: all 0.5s;
+      transition: all 0.5s;
+    }
+
+    @media (min-width: $breakpoint_md) {
+      width: 50%;
+      margin-top: 0;
+      // margin-left: 30px;
+
+      img:hover {
+        -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+        transform: scale(1.1);
+        -webkit-transition: all 0.5s;
+        -o-transition: all 0.5s;
+        transition: all 0.5s;
+      }
+    }
+
+    // @media (min-width: $breakpoint_lg) {
+    //   margin-left: 40px;
+    // }
+
+    // @media (min-width: $breakpoint_lg) {
+    //   margin-left: 110px;
+    // }
+  }
+
+  .left {
+    @media (min-width: $breakpoint_md) {
+      margin-left: 0;
+      width: 50%;
+      -webkit-box-ordinal-group: 0;
+      -ms-flex-order: -1;
+      order: -1;
+    }
+  }
+}

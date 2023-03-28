@@ -1,9 +1,5 @@
-import { Preview } from './Preview'
-import { Text } from './Text'
-import { Title } from './Title'
+import { Preview } from './Preview/Preview'
+import { Text } from './Text/Text'
+import { Title } from './Title/Title'
 
-export {
-  Preview,
-  Text,
-  Title
-}
+export { Preview, Text, Title }
