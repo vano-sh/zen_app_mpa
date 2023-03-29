@@ -18,9 +18,6 @@ export const CashbackPage = () => {
   const handleModalButtonActiveClick = () => {
     dispatch(toggleWindowModal(true))
   }
-
-  if (!data) return
-
   return (
     <>
       <section

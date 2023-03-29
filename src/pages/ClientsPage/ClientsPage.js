@@ -9,8 +9,6 @@ export const ClientsPage = () => {
   const clientsRef = useRef(null)
   useAnimateRef(clientsRef)
 
-  if (!data) return
-
   const clients =
     theme === 'light'
       ? data.pages.clients.lightThemeClients

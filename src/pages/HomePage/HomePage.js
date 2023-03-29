@@ -5,8 +5,6 @@ import classes from './HomePage.module.scss'
 export const HomePage = () => {
   const { data } = useData()
 
-  if (!data) return
-
   return (
     <div className={classes.home}>
       <PrevSection data={data.prevSections.download} />

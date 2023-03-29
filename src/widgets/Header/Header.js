@@ -5,14 +5,11 @@ import { scrollToTop } from 'shared/lib/helpers'
 import classes from './Header.module.scss'
 
 export const Header = () => {
+  const [isBurgerActive, setIsBurgerActive] = useState(false)
+  const [isLogoClicked, setIsLogoClicked] = useState(null)
   const {
     data: { header: data },
   } = useData()
-
-  // console.log(header)
-
-  const [isBurgerActive, setIsBurgerActive] = useState(false)
-  const [isLogoClicked, setIsLogoClicked] = useState(null)
 
   useEffect(() => {
     if (isLogoClicked) {

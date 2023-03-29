@@ -1,7 +1,12 @@
+import { useData } from 'shared/model'
 import { Column, Info } from './components'
 import classes from './Footer.module.scss'
 
-export const Footer = ({ data }) => {
+export const Footer = () => {
+  const {
+    data: { footer: data },
+  } = useData()
+
   return (
     <footer className={classes.footer}>
       <div className={classes.wrapper}>

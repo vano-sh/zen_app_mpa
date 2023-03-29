@@ -1,4 +1,4 @@
-import { Outlet, Route, Routes } from 'react-router-dom'
+import {  Route, Routes } from 'react-router-dom'
 import {
   Header,
   ProgressBar,
@@ -16,14 +16,17 @@ export const LayoutPage = () => {
   return (
     <>
       <Header />
-      {/* <ProgressBar /> */}
-
-      {/* <Outlet /> */}
-
-      {/* <Footer /> */}
-      {/* <Modal /> */}
-      {/* <ModalSlider /> */}
-      {/* <Chatbot /> */}
+      <ProgressBar />
+      <Routes>
+        <Route path='/' element={<HomePage />} />
+        <Route path=':id' element={<InfoPage />} />
+        <Route path='cashback' element={<CashbackPage />} />
+        <Route path='clients' element={<ClientsPage />} />
+      </Routes>
+      <Footer />
+      <Modal />
+      <ModalSlider />
+      <Chatbot />
     </>
   )
 }
